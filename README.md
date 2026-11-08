@@ -4,7 +4,7 @@ Django inventory assistant with Gemini tool calls, SQLite, and GitHub Actions CI
 
 Repository: https://github.com/nabilnabhan61/ai-agent-actions
 
-**Start with [SETUP.md](SETUP.md)** for the remaining GitHub and Windows steps.
+See [SETUP.md](SETUP.md) for restarting the runner and the lab demonstration. Initial GitHub and Windows setup is complete; the owner is handling the instructor invitation.
 
 ## Pipeline
 
@@ -43,8 +43,11 @@ CI tests mock Gemini and need no API key. Real chat requires a valid key and acc
 - Django system check: passed.
 - Migration drift check: passed.
 - Eight tests: passed (inventory, chat session, reset, missing key, mocked agent tool call).
-- Local tests used Python 3.12; CI and Docker use Python 3.13.
-- Docker build, GHCR publishing, self-hosted deployment, and live Gemini calls remain to be verified after setup. Docker's engine was unavailable during preparation.
+- Tests passed both locally on Python 3.12 and inside Linux Docker on Python 3.13.
+- GitHub-hosted CI, Docker build, container smoke test, and GHCR publishing passed.
+- Windows runner `ai-agent-local` is registered with label `ai-agent-deploy`.
+- First self-hosted deployment passed: container healthy and homepage HTTP 200.
+- Live Gemini testing was stopped at the owner's request; this assignment verifies Actions and deployment.
 
 ## Attribution
 

@@ -1,6 +1,6 @@
 # Finish Assignment 6
 
-The application files are ready. Complete these steps on your Windows computer.
+The repository is pushed, the local environment file is configured, and the runner is installed at `%USERPROFILE%\actions-runner-ai-agent`. The steps below document setup and how to reproduce it. Do not register a second runner or overwrite the existing environment file.
 
 ## 1. Start Docker Desktop
 
@@ -107,7 +107,7 @@ git push
 
 ## Restart for a later lab session
 
-Start Docker Desktop, then run `run.cmd` in your runner folder. The container has an `unless-stopped` restart policy. To redeploy the current code, open Actions, select **CI and local deployment**, then **Run workflow** on `main`.
+Start Docker Desktop, then run `run.cmd` in your runner folder if the runner is not already running. The setup session started it in the background; do not start a duplicate instance. The container has an `unless-stopped` restart policy. To redeploy the current code, open Actions, select **CI and local deployment**, then **Run workflow** on `main`.
 
 ## Useful diagnostics
 
@@ -121,11 +121,12 @@ If port 8000 is already occupied, identify the other app/container before stoppi
 
 ## Completion checklist
 
-- [ ] Code pushed to the new repository
-- [ ] CI checks, image build, and smoke test green
-- [ ] Image published to GHCR
-- [ ] Windows runner online and deploy job green
-- [ ] App and real Gemini chat work locally
+- [x] Code pushed to the new repository
+- [x] CI checks, image build, and smoke test green
+- [x] Image published to GHCR
+- [x] Windows runner online and deploy job green
+- [x] App serves HTTP 200 locally
+- Live Gemini validation omitted at the owner's request (outside assignment focus)
 - [ ] Visible edit redeploys automatically and inventory survives
 - [ ] Instructor invitation sent
 - [ ] Deployment demonstrated in the lab
